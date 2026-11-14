@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#181425" />
+  <title>דוכן החילוץ · הרכבלית נתקעה</title>
+  <meta name="description" content="משחק פיקסל: הרכבלית בחיפה נתקעה, והסטודנטים בקרונות רעבים, עייפים ובלי סוללה. מפעילים את דוכן החילוץ בלב המפרץ ושולחים להם סלים על הכבל." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="screen" width="768" height="432" aria-label="דוכן החילוץ"></canvas>
+
+    <!-- Start -->
+    <section class="overlay show" id="menu">
+      <div class="panel">
+        <div class="tag">חיפה · לב המפרץ · 16:00</div>
+        <h1>דוכן<br>החילוץ</h1>
+        <p>הרכבלית נתקעה באמצע הדרך לטכניון. בקרונות: סטודנטים לפני מבחן, סבתא אחת, חייל אחד וכלב.<br>
+        אתם מפעילים את הדוכן היחיד שעונה להם.</p>
+        <ol class="how">
+          <li><b>1</b> מסתכלים מה הקרון מבקש</li>
+          <li><b>2</b> לוחצים על המצרכים – הם נערמים בסל</li>
+          <li><b>3</b> לוחצים על הקרון – הסל עולה בכבל</li>
+          <li><b>📞</b> אינטרקום מצלצל? עונים מהר!</li>
+          <li><b>💨</b> ברוח הסל מתנדנד ומפיל דברים. מחכים.</li>
+        </ol>
+        <button class="px-btn big" id="startBtn">פותחים את הדוכן ▶</button>
+        <div class="rotate">📱↻ עדיף לסובב את הטלפון לרוחב</div>
+      </div>
+    </section>
+
+    <!-- Between shifts -->
+    <section class="overlay" id="shiftEnd">
+      <div class="panel">
+        <div class="tag" id="seTag">משמרת 1 הסתיימה</div>
+        <h2 id="seTitle">כל הכבוד!</h2>
+        <div class="stars" id="seStars"></div>
+        <div class="stats" id="seStats"></div>
+        <p id="seText"></p>
+        <div class="shop" id="shop"></div>
+        <button class="px-btn big" id="seNext">למשמרת הבאה ▶</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
